@@ -1,0 +1,14 @@
+for database
+
+$dbname      = "dbname = even_more_awesome_application";
+
+CREATE TABLE IF NOT EXISTS public.usermapping
+(
+    user_id integer NOT NULL DEFAULT nextval('usermapping_user_id_seq'::regclass),
+    firstname character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    lastname character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    email character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    password character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT usermapping_pkey PRIMARY KEY (user_id),
+    CONSTRAINT usermapping_email_key UNIQUE (email)
+)
