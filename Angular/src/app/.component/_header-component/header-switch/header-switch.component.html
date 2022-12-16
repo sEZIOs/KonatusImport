@@ -1,0 +1,15 @@
+<div *ngIf="headerView == 'importView'">
+  <app-header text="Import" [headerView]="headerView"></app-header>
+</div>
+<div *ngIf="headerView == 'mappingProgramView'">
+  <app-header text="Mapping Program" [headerView]="headerView"></app-header>
+</div>
+<div *ngIf="headerView == 'mappingEssentialView'">
+  <app-header text="Mapping Essential" [headerView]="headerView"></app-header>
+</div>
+<div *ngIf="headerView == 'mappingOptionalView'">
+  <app-header text="Mapping Optional" [headerView]="headerView"></app-header>
+</div>
+<div *ngIf="headerView == 'visualizeView'">
+  <app-header text="Visualize" [headerView]="headerView"></app-header>
+</div>

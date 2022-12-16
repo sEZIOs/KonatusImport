@@ -1,0 +1,38 @@
+$customBlue: #283046;
+$customBlue2: #313b56;
+$customBlue3: #586583;
+$customWhiteGrey: #d0d2d6;
+$customPurple: #7367f0;
+$customPurple2: #635AC6;
+$customPurpleDisable: #7367f066;
+$customGrey: #676D7D;
+$customOrange: #D68232;
+$customExcel: #02723B;
+$customExcel2: #026132;
+$customRed: #EA5455;
+
+$custom-theme-colors: (
+  "blue": $customBlue,
+  "blue-2": $customBlue2,
+  "blue-3": $customBlue3,
+  "purple": $customPurple,
+  "purple-2": $customPurple2,
+  "purple-disable": $customPurpleDisable,
+  "wg": $customWhiteGrey,
+  "grey": $customGrey,
+  "orange": $customOrange,
+  "excel": $customExcel,
+  "excel-2": $customExcel2,
+  "red": $customRed
+);
+
+$theme-colors: map.merge($custom-theme-colors, $theme-colors);
+
+@each $key, $val in $custom-theme-colors {
+  .bg-#{$key} {
+    background-color: $val;
+  }
+  .text-#{$key} {
+    color: $val;
+  }
+}

@@ -1,0 +1,9 @@
+<div class="col-12 d-flex p-0 mt-3 overflow-auto navigation">
+  <div *ngFor="let project of projects">
+    <app-tab
+      [projectName]="project.name"
+      [projectState]="project.selected"
+      (click)="selectProject(project.id)"
+    ></app-tab>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+@import "../../_scss/global.scss";
+
+.h-70px{
+    height: 70px;
+}
+
+.h-diff{
+    height: calc(100% - 70px - 55px);
+}
+
+.h-55px{
+    height: 55px;
+}

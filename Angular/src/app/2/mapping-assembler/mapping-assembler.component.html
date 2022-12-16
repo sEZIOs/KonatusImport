@@ -1,0 +1,17 @@
+<div class="row align-content-start p-4 m-0 bg-blue w-100 h-100">
+  <app-header-switch *ngIf="state == 'program'" headerView="mappingProgramView"></app-header-switch>
+  <app-header-switch *ngIf="state == 'essential'" headerView="mappingEssentialView"></app-header-switch>
+  <app-header-switch *ngIf="state == 'optional'" headerView="mappingOptionalView"></app-header-switch>
+  <div class="col-12 d-flex p-0 mt-3">
+    <h5 class="medium text-wg me-2">
+      Konatus matches your attributes to ours.
+    </h5>
+    <a class="text-decoration-none d-flex align-items-start" href=""
+      ><h5 class="medium text-purple">Click here for more informations</h5></a
+    >
+  </div>
+  <app-project-nav class="p-0"></app-project-nav>
+  <app-mapping-program *ngIf="state == 'program'" class="mapping p-0 mt-3"></app-mapping-program>
+  <app-mapping-essential *ngIf="state == 'essential'" class="mapping p-0 mt-3"></app-mapping-essential>
+  <app-mapping-optional *ngIf="state == 'optional'" class="mapping p-0 mt-3"></app-mapping-optional>
+</div>

@@ -1,0 +1,21 @@
+@import "../../_scss/global.scss";
+
+.h-2px {
+  height: 2px;
+}
+
+.border-purple {
+  border: 2px solid $customPurple;
+}
+.border-orange {
+  border: 2px solid $customOrange;
+}
+
+.border-red {
+  border: 2px solid $customRed;
+}
+
+
+.mb-12px {
+  margin-bottom: 12px;
+}

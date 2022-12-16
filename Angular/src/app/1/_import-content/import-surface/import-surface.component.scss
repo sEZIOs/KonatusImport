@@ -1,0 +1,15 @@
+@import "../../../_scss/global.scss";
+
+.import{
+    height: 100%;
+}
+
+.import-surface {
+  min-height: 145px;
+  height: 100%;
+}
+
+label {
+  color: $customPurple;
+  @include font-size-custom(18px, 23.4px);
+}

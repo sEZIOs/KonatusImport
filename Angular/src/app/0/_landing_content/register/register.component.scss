@@ -1,0 +1,15 @@
+@import "../../../_scss/global.scss";
+
+.input-style{
+    border: solid 2px #595E71;
+    background-color: #313b56;
+}
+
+.input-style:focus {
+    border: solid 2px #7367F0;
+    background-color: #313b56;
+    box-shadow: none;
+}
+.input-style:placeholder-shown {
+    color: #595E71;
+}

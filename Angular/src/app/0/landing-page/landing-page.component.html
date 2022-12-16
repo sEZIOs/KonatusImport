@@ -1,0 +1,20 @@
+<div class="bg-blue d-flex flex-column justify-content-center h-100 w-100">
+    <div class="d-flex justify-content-center mb-5">
+        <img src="../assets/img/logo_konatus.svg" class="mt-5 my-3" width="250px" alt="profile" />
+    </div>
+    <div class="col-md-6 offset-md-3 mb-5 bg-blue-2">
+        <app-login *ngIf="!showState"></app-login>
+        <app-register *ngIf="showState"></app-register>
+
+        <div *ngIf="showState" id="emailHelp" class="form-text text-center mb-5 text-white">
+            Not Registered?
+            <a class="text-purple text-decoration-none fw-bold cursor" (click)="stateSwitch()"> Login</a>
+        </div>
+        <div *ngIf="!showState" id="emailHelp" class="form-text text-center mb-5 text-white">
+            Not Registered?
+            <a class="text-purple text-decoration-none fw-bold cursor" (click)="stateSwitch()">
+        Create an Account</a
+      >
+    </div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<form class="card-body cardbody-color px-5 pt-5 pb-4" #registerForm="ngForm" (ngSubmit)="saveData(registerForm)">
+    <h2 class="text-white">Register</h2>
+    <div class="my-4 form-group">
+        <input type="text" class="form-control input-style text-white" id="firstName" placeholder="First Name" autocomplete="off" [(ngModel)]="user.firstName" name="firstName" required pattern="[A-zÀ-ú- ]*" #firstNameVar="ngModel" [ngClass]="{ 'is-invalid': firstNameVar.touched && !firstNameVar.valid }"
+        />
+        <div class="invalid-feedback">
+            <ul>
+                <li *ngIf="firstNameVar.errors?.['pattern']">
+                    Ceci n'est pas un nom.
+                </li>
+                <li *ngIf="firstNameVar.errors?.['required']">Entrez votre prénom.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="mb-4 form-group">
+        <input type="text" class="form-control input-style text-white" id="lastName" placeholder="Last Name" autocomplete="off" [(ngModel)]="user.lastName" name="lastName" required pattern="[A-zÀ-ú- ]*" #lastNameVar="ngModel" [ngClass]="{ 'is-invalid': lastNameVar.touched && !lastNameVar.valid }"
+        />
+        <div class="invalid-feedback">
+            <ul>
+                <li *ngIf="lastNameVar.errors?.['pattern']">
+                    Le champ ne doit contenir que des lettres.
+                </li>
+                <li *ngIf="lastNameVar.errors?.['required']">Entrez votre nom.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="mb-4 form-group">
+        <input type="email" class="form-control input-style text-white" id="email" placeholder="Email" autocomplete="off" [(ngModel)]="user.email" name="email" required pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+" #emailVar="ngModel" [ngClass]="{ 'is-invalid': emailVar.touched && !emailVar.valid }"
+        />
+        <div class="invalid-feedback">
+            <ul>
+                <li *ngIf="emailVar.errors?.['pattern']">Ce n'est pas un email</li>
+                <li *ngIf="emailVar.errors?.['required']">Entrez votre email.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="mb-4 form-group">
+        <input type="text" class="form-control input-style text-white" id="password" placeholder="Password" autocomplete="off" [(ngModel)]="user.password" name="password" required pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$" #passwordVar="ngModel" [ngClass]="{
+        'is-invalid': passwordVar.touched && !passwordVar.valid
+      }" />
+        <div class="invalid-feedback">
+            <ul>
+                <li *ngIf="passwordVar.errors?.['pattern']">Minimum eight characters, at least one upper case, one lower case, and one number.</li>
+                <li *ngIf="passwordVar.errors?.['required']">Entrez votre password.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="text-center">
+        <button class="btn btn-purple p-2 w-100 text-white" [disabled]="registerForm.invalid">
+      Register
+    </button>
+    </div>
+</form>

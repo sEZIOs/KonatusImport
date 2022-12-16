@@ -1,0 +1,70 @@
+<div class="row m-0 mb-3">
+  <div class="col rounded {{ bgColor }} p-2 h-100 {{ borderColor }}">
+    <div class="w-100 m-0 p-0 d-flex justify-content-start align-items-center">
+      <app-svg
+        *ngIf="icon == 'valid'"
+        name="konatusLogo"
+        w="10"
+        h="10"
+        [color]="color2"
+      ></app-svg>
+      <app-svg
+        *ngIf="icon == 'signal' || icon == 'error'"
+        name="konatusLogo"
+        w="10"
+        h="10"
+        [color]="color2"
+      ></app-svg>
+
+      <h5 class="ms-1" [style.color]="color2">Konatus Attribut</h5>
+    </div>
+    <div class="w-100 h-100 m-0 p-0 overflow-hidden">
+      <div class="d-flex w-100 h-100">
+        <h5 class="align-self-center medium text-wg">{{ konatusAttribut }}</h5>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="col d-flex flex-column justify-content-center align-items-center p-0"
+  >
+    <app-svg
+      *ngIf="icon == 'valid'"
+      class="mb-2"
+      name="valid"
+      w="12"
+      h="8"
+      [color]="color2"
+    ></app-svg>
+    <app-svg
+      *ngIf="icon == 'error'"
+      class="mb-2"
+      name="cross"
+      w="10"
+      h="10"
+      [color]="color2"
+    ></app-svg>
+    <app-svg
+      *ngIf="icon == 'signal'"
+      class="mb-2"
+      name="signal"
+      w="12"
+      h="12"
+      [color]="color2"
+    ></app-svg>
+
+    <div class="mb-12px w-100 h-2px {{ bgColor }}"></div>
+  </div>
+
+  <div class="col rounded bg-excel p-2 h-100 {{ borderColor }}">
+    <div class="w-100 m-0 p-0 d-flex justify-content-start align-items-center">
+      <app-svg name="csv" w="10" h="12" color="#026132"></app-svg>
+      <h5 class="ms-1 text-excel-2">CSV Attribut</h5>
+    </div>
+    <div class="w-100 h-100 m-0 p-0 overflow-hidden">
+      <div class="d-flex w-100 h-100">
+        <h5 class="align-self-center medium text-wg">{{ csvAttribut }}</h5>
+      </div>
+    </div>
+  </div>
+</div>

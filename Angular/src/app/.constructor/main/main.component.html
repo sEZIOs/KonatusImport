@@ -1,0 +1,19 @@
+
+<div class="h-100 bg-body p-4">
+    <div class="d-flex flex-column w-100 h-100 bg-danger">
+      <div class="d-flex justify-content-center align-items-center bg-primary w-100 h-70px">
+        <h1>ToolBar</h1>
+        <button class="btn btn-info ms-4" (click)="swichView()">Import</button>
+      </div>
+      <div *ngIf="view['default']==true" class="d-flex justify-content-center align-items-center bg-info w-100 h-diff">
+        <h1>Content</h1>
+      </div>
+      <app-import-assembler *ngIf="view['import']==true" class="h-diff"></app-import-assembler>
+      <app-mapping-assembler *ngIf="view['mapping']==true" class="h-diff" [state]="mappingState"></app-mapping-assembler>
+      <app-visualize-assembler *ngIf="view['visualize']==true" class="h-diff"></app-visualize-assembler>
+      <div class="d-flex justify-content-center align-items-center bg-primary w-100 h-55px">
+        <h1>Footer</h1>
+      </div>
+    </div>
+  </div>
+  

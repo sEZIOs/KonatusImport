@@ -1,0 +1,11 @@
+<button
+  class="d-flex align-items-center onglet p-0"
+  [ngStyle]="{
+    'border-bottom': projectState == true ? '3px solid #7367f0' : 'none'
+  }"
+>
+  <app-svg class="ms-2" name="valid" w="14" h="10" color="#7367f0"></app-svg>
+  <div class="d-flex overflow-hidden mx-2 onglet-name">
+    <h5 class="justify-content-start medium text-wg">{{ projectName }}</h5>
+  </div>
+</button>

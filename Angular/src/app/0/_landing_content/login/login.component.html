@@ -1,0 +1,13 @@
+<form class="card-body cardbody-color px-5 pt-5 pb-4" (ngSubmit)="saveData(loginForm)" #loginForm="ngForm">
+    <h2 class="text-white">Sign In</h2>
+
+    <div class="mt-4 form-group">
+        <input type="text" class="form-control input-style text-white" id="email" placeholder="Email" [(ngModel)]="user.email" name="email" ngControl="email" autocomplete="off" />
+    </div>
+    <div class="mt-4 form-group">
+        <input type="password" class="form-control input-style text-white" id="password" placeholder="Password" [(ngModel)]="user.password" name="password" ngControl="password" autocomplete="off" />
+    </div>
+    <div class="text-center mt-4">
+        <button type="submit" class="btn btn-purple p-2 w-100 text-white border-0">Login</button>
+    </div>
+</form>

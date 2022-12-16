@@ -1,0 +1,21 @@
+@import "../../../_scss/global.scss";
+
+.onglet {
+  height: 37px;
+  background-color: $customBlue;
+  border: none;
+}
+
+.border-selected {
+  border-bottom: 3px solid $customPurple;
+}
+
+.border-none {
+  border: none;
+}
+
+
+
+.onglet-name {
+  width: 84px;
+}
