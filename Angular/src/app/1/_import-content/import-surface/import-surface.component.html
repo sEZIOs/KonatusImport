@@ -1,18 +1,16 @@
 <div class="col-12 p-0 mt-4 import">
-  <div
-    class="d-flex flex-column justify-content-center align-items-center w-100 bg-blue-2 import-surface rounded"
-  >
-    <input
-      type="file"
-      id="file"
-      name="file"
-      accept="image/png, image/jpeg"
-      hidden
-    />
-    <label for="file" class="medium text-wg">Drop files her or</label>
-    <label for="file" class="medium">click to import</label>
-    <label for="file" class="mt-3"
-      ><img src="../../assets/icon/import_icon.svg" alt="import icon"
+    <div class="d-flex flex-column justify-content-center align-items-center w-100 bg-blue-2 import-surface rounded">
+        <input type="file" id="file" name="file" accept="image/png/csv, image/jpeg/csv" (change)="onFileChange($event)" hidden />
+        <label for="file" class="medium text-wg">Drop files here or</label>
+        <label for="file" class="medium">click to import</label>
+        <label for="file" class="mt-3"><img src="../../assets/icon/import_icon.svg" alt="import icon"
     /></label>
-  </div>
+        <table class="table" style="background-color: white">
+            <tbody>
+                <tr *ngFor="let row of data">
+                    <td *ngFor="let val of row">{{val}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

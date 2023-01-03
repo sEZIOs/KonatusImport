@@ -34,6 +34,8 @@ import { LoginComponent } from './0/_landing_content/login/login.component';
 import { RegisterComponent } from './0/_landing_content/register/register.component';
 import { LandingPageComponent } from './0/landing-page/landing-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { sharedService } from './_data/shared.service';
+
 
 
 
@@ -67,7 +69,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     OtherLinkComponent,
     LoginComponent,
     RegisterComponent,
-    LandingPageComponent
+    LandingPageComponent,
+
 
   ],
   imports: [
@@ -77,7 +80,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     ReactiveFormsModule,
   ],
-  providers: [InterfaceViewService],
+  providers: [InterfaceViewService, sharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
